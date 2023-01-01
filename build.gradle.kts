@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
+
 plugins {
-    kotlin("multiplatform") version "1.7.10"
+    kotlin("multiplatform") version "1.8.0"
 }
 
 group = "com.example"
@@ -19,9 +22,6 @@ kotlin {
     }
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile<*>>().configureEach {
-    kotlinOptions.freeCompilerArgs += listOf(
-        "-Xwasm-launcher=d8",
-        "-Xwasm-debug-info=false"  // Needed for binaryen
-    )
+rootProject.plugins.withType(NodeJsRootPlugin::class.java) {
+    rootProject.the<NodeJsRootExtension>().nodeVersion = "19.3.0"
 }

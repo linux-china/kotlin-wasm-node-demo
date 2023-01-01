@@ -1,9 +1,9 @@
-# build the project with Wasm
-build:
-  ./gradlew wasmMainClasses build
-
 # run Wasm with node
-start: build
+start:
+  ./gradlew wasmNodeRun
+
+# start with production
+start-prod:
   ./gradlew wasmNodeProductionRun
 
 # run by command line

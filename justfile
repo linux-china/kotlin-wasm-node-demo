@@ -13,3 +13,8 @@ run:
 # build for release
 build:
   ./gradlew build
+
+# clean
+clean:
+  ./gradlew clean
+  rm -rf kotlin-js-store

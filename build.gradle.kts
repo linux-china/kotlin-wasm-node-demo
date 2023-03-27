@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 
 plugins {
-    kotlin("multiplatform") version "1.8.10"
+    kotlin("multiplatform") version "1.8.20-RC2"
 }
 
 group = "com.example"
@@ -23,5 +23,5 @@ kotlin {
 }
 
 rootProject.plugins.withType(NodeJsRootPlugin::class.java) {
-    rootProject.the<NodeJsRootExtension>().nodeVersion = "19.6.0"
+    rootProject.the<NodeJsRootExtension>().nodeVersion = "19.8.1"
 }

@@ -22,6 +22,10 @@ kotlin {
     }
 }
 
-rootProject.plugins.withType(NodeJsRootPlugin::class.java) {
-    rootProject.the<NodeJsRootExtension>().nodeVersion = "19.8.1"
+rootProject.the<NodeJsRootExtension>().apply {
+    nodeVersion = "20.0.0-v8-canary20230417bc4174881a"
+    nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
 }
+
+// Use a proper version of webpack, TODO remove after updating to Kotlin 1.9.
+rootProject.the<NodeJsRootExtension>().versions.webpack.version = "5.76.2"

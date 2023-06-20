@@ -14,6 +14,9 @@ run:
 build:
   ./gradlew build
 
+release:
+  ./gradlew compileProductionExecutableKotlinWasmOptimize
+
 # clean
 clean:
   ./gradlew clean

@@ -5,8 +5,8 @@ This sample leverages Kotlin/Wasm and V8 and GC, typed function references and e
 
 # Requirements
 
-* Kotlin 1.8.0-RC2
-* Node.js 20.0.0: https://nodejs.org/download/v8-canary/
+* Kotlin 1.9.0-RC
+* Node.js 20.2.0
 
 # Build and Run
 

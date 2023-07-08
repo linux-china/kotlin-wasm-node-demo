@@ -5,8 +5,8 @@ This sample leverages Kotlin/Wasm and V8 and GC, typed function references and e
 
 # Requirements
 
-* Kotlin 1.9.0-RC
-* Node.js 20.2.0
+* Kotlin 1.9.0
+* Node.js 20.4.0
 
 # Build and Run
 
@@ -26,3 +26,8 @@ $ node --experimental-wasm-gc kotlin/kotlin-wasm-node-example-wasm.mjs
 ```shell
 deno run --unstable -A --v8-flags=--experimental-wasm-typed-funcref,--experimental-wasm-gc kotlin-wasm-node-example-wasm.mjs
 ```
+
+# References
+
+* Kotlin Wasm: https://kotlinlang.org/docs/wasm-get-started.html
+* Kotlin Wasm Interoperability with JavaScript: https://kotlinlang.org/docs/wasm-js-interop.html

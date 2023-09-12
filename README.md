@@ -5,8 +5,8 @@ This sample leverages Kotlin/Wasm and V8 and GC, typed function references and e
 
 # Requirements
 
-* Kotlin 1.9.0
-* Node.js 20.4.0
+* Kotlin 1.9.20-Beta
+* Node.js 20.6.1
 
 # Build and Run
 

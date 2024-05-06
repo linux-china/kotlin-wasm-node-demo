@@ -10,6 +10,10 @@ start-prod:
 run:
   cd build/js/packages/kotlin-wasm-node-example-wasm-js/ ; node kotlin/kotlin-wasm-node-example-wasm-js.mjs
 
+# run by deno
+deno-run:
+  cd build/js/packages/kotlin-wasm-node-example-wasm-js/ ; deno run -A kotlin/kotlin-wasm-node-example-wasm-js.mjs
+
 # run demo.mjs to call exported method from Kotlin Wasm
 demo:
   node demo.mjs

@@ -1,12 +1,12 @@
 Kotlin WebAssembly Demo in Node.js 20
 ==============================================
 
-This sample leverages Kotlin/Wasm and V8 and GC, typed function references and exception handling proposals.
+This sample leverages Kotlin/Wasm and V8 and GC.
 
 # Requirements
 
-* Kotlin 1.9.20-Beta
-* Node.js 20.6.1
+* Kotlin 2.0.0-RC2
+* Node.js 22.1.0
 
 # Build and Run
 
@@ -14,17 +14,18 @@ This sample leverages Kotlin/Wasm and V8 and GC, typed function references and e
 $ ./gradlew wasmNodeRun
 ```
 
-# Run with Node.js 20
+# Run with Node.js 22
 
 ```shell
-$ cd build/js/packages/kotlin-wasm-node-example-wasm/
-$ node --experimental-wasm-gc kotlin/kotlin-wasm-node-example-wasm.mjs
+$ cd build/js/packages/kotlin-wasm-node-example-wasm-js/
+$ node kotlin/kotlin-wasm-node-example-wasm.mjs
 ```
 
-# Run with Deno
+# Run with Deno 1.43
 
 ```shell
-deno run --unstable -A --v8-flags=--experimental-wasm-typed-funcref,--experimental-wasm-gc kotlin-wasm-node-example-wasm.mjs
+$ cd build/js/packages/kotlin-wasm-node-example-wasm-js/
+$ deno run -A kotlin/kotlin-wasm-node-example-wasm-js.mjs
 ```
 
 # References

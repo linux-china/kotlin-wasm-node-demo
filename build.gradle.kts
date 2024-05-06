@@ -1,8 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
-import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
 
 plugins {
-    kotlin("multiplatform") version "1.9.20-Beta"
+    kotlin("multiplatform") version "2.0.0-RC2"
 }
 
 group = "com.example"
@@ -16,13 +15,11 @@ kotlin {
     wasmJs {
         binaries.executable()
         nodejs()
-        applyBinaryen()
+        //applyBinaryen()
     }
-    sourceSets {
-        val wasmJsMain by getting {}
-    }
+
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    nodeVersion = "20.6.1"
+    nodeVersion = "22.1.0"
 }

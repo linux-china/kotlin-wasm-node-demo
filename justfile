@@ -1,14 +1,14 @@
 # run Wasm with node
 start:
-  ./gradlew wasmNodeRun
+  ./gradlew wasmJsNodeRun
 
 # start with production
 start-prod:
-  ./gradlew wasmNodeProductionRun
+  ./gradlew wasmJsNodeProductionRun
 
 # run by command line
 run:
-  cd build/js/packages/kotlin-wasm-node-example-wasm/ ; node --experimental-wasm-gc kotlin/kotlin-wasm-node-example-wasm.mjs
+  cd build/js/packages/kotlin-wasm-node-example-wasm-js/ ; node kotlin/kotlin-wasm-node-example-wasm-js.mjs
 
 # run demo.mjs to call exported method from Kotlin Wasm
 demo:
@@ -17,9 +17,10 @@ demo:
 # build for release
 build:
   ./gradlew build
+  ls -al build/js/packages/kotlin-wasm-node-example-wasm-js/kotlin/*.wasm
 
 release:
-  ./gradlew compileProductionExecutableKotlinWasmOptimize
+  ./gradlew compileProductionExecutableKotlinWasmJsOptimize
 
 # clean
 clean:

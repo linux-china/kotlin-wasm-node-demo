@@ -15,7 +15,8 @@ kotlin {
     wasmJs {
         binaries.executable()
         nodejs()
-        //applyBinaryen()
+        useEsModules()
+        generateTypeScriptDefinitions()
     }
 
 }

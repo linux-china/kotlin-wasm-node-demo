@@ -12,7 +12,7 @@ run:
 
 # run demo.mjs to call exported method from Kotlin Wasm
 demo:
-  node --experimental-wasm-gc demo.mjs
+  node demo.mjs
 
 # build for release
 build:

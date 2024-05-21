@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 
 plugins {
-    kotlin("multiplatform") version "2.0.0-RC3"
+    kotlin("multiplatform") version "2.0.0"
 }
 
 group = "com.example"
@@ -22,5 +22,5 @@ kotlin {
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    nodeVersion = "22.1.0"
+    version = "22.1.0"
 }

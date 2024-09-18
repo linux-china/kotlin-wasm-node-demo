@@ -22,5 +22,5 @@ kotlin {
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    version = "22.7.0"
+    version = "22.9.0"
 }

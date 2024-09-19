@@ -6,13 +6,17 @@ start:
 start-prod:
   ./gradlew wasmJsNodeProductionRun
 
-# run by command line
+# run by node.js 22
 run:
-  cd build/js/packages/kotlin-wasm-node-example-wasm-js/ ; node kotlin/kotlin-wasm-node-example-wasm-js.mjs
+  node demo.mjs
 
-# run by deno
+# run by Deno
 deno-run:
-  cd build/js/packages/kotlin-wasm-node-example-wasm-js/ ; deno run -A kotlin/kotlin-wasm-node-example-wasm-js.mjs
+  deno run -A demo.mjs
+
+# run by Bun
+bun-run:
+  bun run demo.mjs
 
 # run demo.mjs to call exported method from Kotlin Wasm
 demo:

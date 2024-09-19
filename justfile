@@ -30,6 +30,11 @@ build:
 release:
   ./gradlew compileProductionExecutableKotlinWasmJsOptimize
 
+# bundle with esbuild
+bundle:
+  esbuild demo.mjs --bundle --format=esm --outfile=dist/bundle.js
+  cp build/js/packages/kotlin-wasm-node-example-wasm-js/kotlin/kotlin-wasm-node-example-wasm-js.wasm ./dist
+
 # clean
 clean:
   ./gradlew clean

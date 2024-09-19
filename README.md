@@ -1,12 +1,14 @@
 Kotlin WebAssembly Demo in Node.js 20
 ==============================================
 
-This sample leverages Kotlin/Wasm and V8 and GC.
+Kotlin/Wasm(GC) demo in Node.js 22, Deno 1.46 and Bun 1.1.28.
 
 # Requirements
 
-* Kotlin 2.0.0-RC2
-* Node.js 22.1.0
+* Kotlin 2.0.20
+* Node.js 22.9.0
+* Deno 1.46
+* Bun 1.1.28
 
 # Build and Run
 
@@ -17,15 +19,19 @@ $ ./gradlew wasmNodeRun
 # Run with Node.js 22
 
 ```shell
-$ cd build/js/packages/kotlin-wasm-node-example-wasm-js/
-$ node kotlin/kotlin-wasm-node-example-wasm.mjs
+$ node demo.mjs
 ```
 
-# Run with Deno 1.43
+# Run with Deno 1.46
 
 ```shell
-$ cd build/js/packages/kotlin-wasm-node-example-wasm-js/
-$ deno run -A kotlin/kotlin-wasm-node-example-wasm-js.mjs
+$ deno run -A demo.mjs
+```
+
+# Run with Bun 1.1.28
+
+```shell
+$ bun run demo.mjs
 ```
 
 # References

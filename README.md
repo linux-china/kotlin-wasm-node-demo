@@ -1,7 +1,7 @@
 Kotlin WebAssembly Demo in Node.js 20
 ==============================================
 
-Kotlin/Wasm(GC) demo in Node.js 22, Deno 1.46 and Bun 1.1.28.
+Kotlin/Wasm(GC) demo in Node.js 22, Deno 2.0 and Bun 1.1.34.
 
 # Requirements
 

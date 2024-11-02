@@ -1,3 +1,6 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 
 plugins {
@@ -11,6 +14,10 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile>().configureEach {
+    compilerOptions.freeCompilerArgs.addAll(listOf("-Xwasm-use-traps-instead-of-exceptions"))
+}
+
 kotlin {
     wasmJs {
         binaries.executable()
@@ -22,5 +29,5 @@ kotlin {
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    version = "22.9.0"
+    version = "22.10.0"
 }

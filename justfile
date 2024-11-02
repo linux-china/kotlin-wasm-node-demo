@@ -8,11 +8,11 @@ start-prod:
 
 # run by node.js 22
 run:
-  node demo.mjs
+  node --experimental-wasm-exnref demo.mjs
 
 # run by Deno
 deno-run:
-  deno run -A demo.mjs
+  deno run --v8-flags=--experimental-wasm-exnref -A demo.mjs
 
 # run by Bun
 bun-run:
@@ -21,6 +21,10 @@ bun-run:
 # run demo.mjs to call exported method from Kotlin Wasm
 demo:
   node demo.mjs
+
+# run demo.mjs to call exported method from Kotlin Wasm
+wasmtime-run:
+  wasmtime run -W function-references,gc --invoke welcome build/js/packages/kotlin-wasm-node-example-wasm-js/kotlin/kotlin-wasm-node-example-wasm-js.wasm "Jackie"
 
 # build for release
 build:

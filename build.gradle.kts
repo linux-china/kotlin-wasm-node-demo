@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 
 plugins {
-    kotlin("multiplatform") version "2.1.0-Beta2"
+    kotlin("multiplatform") version "2.1.0-RC"
 }
 
 group = "com.example"

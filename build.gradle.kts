@@ -1,10 +1,11 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
+import org.gradle.kotlin.dsl.the
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsEnvSpec
+import org.jetbrains.kotlin.gradle.targets.wasm.nodejs.WasmNodeJsEnvSpec
 
 plugins {
-    kotlin("multiplatform") version "2.1.20"
+    kotlin("multiplatform") version "2.2.0-RC"
 }
 
 group = "com.example"
@@ -28,6 +29,6 @@ kotlin {
 
 }
 
-rootProject.the<NodeJsEnvSpec>().apply {
-    version = "22.14.0"
+rootProject.the<WasmNodeJsEnvSpec>().apply {
+    version = "24.1.0"
 }
